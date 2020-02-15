@@ -10,8 +10,8 @@ function removeFromArray(arr, elt) {
   
   // An educated guess of how far it is between two points
   function heuristic(a, b) {
-    var d = dist(a.i, a.j, b.i, b.j);
-    // var d = abs(a.i - b.i) + abs(a.j - b.j);
+    // var d = dist(a.i, a.j, b.i, b.j);
+    var d = abs(a.i - b.i) + abs(a.j - b.j);
     return d;
   }
   
