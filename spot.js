@@ -1,10 +1,3 @@
-// Daniel Shiffman
-// http://codingtra.in
-// http://patreon.com/codingtrain
-// Part 1: https://youtu.be/aKYlikFAV4k
-// Part 2: https://youtu.be/EaZxUCWAjb0
-// Part 3: https://youtu.be/jwRT4PCT6RU
-
 // An object to describe a spot in the grid
 function Spot(i, j) {
     // Location
@@ -29,14 +22,14 @@ function Spot(i, j) {
     }
 
     // Display me
-    this.show = function (col) {
+    this.show = function (color) {
         if (this.wall) {
             fill(0);
             noStroke();
             rect(this.i * w, this.j * h, w - 1, h - 1);
             // ellipse(this.i * w + w / 2, this.j * h + h / 2, w / 2, h / 2);
-        } else if (col) {
-            fill(col);
+        } else if (color) {
+            fill(color);
             rect(this.i * w, this.j * h, w, h);
         }
     };
@@ -57,17 +50,17 @@ function Spot(i, j) {
         if (j > 0) {
             this.neighbors.push(grid[i][j - 1]);
         }
-        //   if (i > 0 && j > 0) {
+        // if (i > 0 && j > 0) {
         //     this.neighbors.push(grid[i - 1][j - 1]);
-        //   }
-        //   if (i < cols - 1 && j > 0) {
+        // }
+        // if (i < cols - 1 && j > 0) {
         //     this.neighbors.push(grid[i + 1][j - 1]);
-        //   }
-        //   if (i > 0 && j < rows - 1) {
+        // }
+        // if (i > 0 && j < rows - 1) {
         //     this.neighbors.push(grid[i - 1][j + 1]);
-        //   }
-        //   if (i < cols - 1 && j < rows - 1) {
+        // }
+        // if (i < cols - 1 && j < rows - 1) {
         //     this.neighbors.push(grid[i + 1][j + 1]);
-        //   }
+        // }
     };
 }
